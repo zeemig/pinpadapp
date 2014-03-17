@@ -1,40 +1,185 @@
-
 <html>
-  <head>
-    <title>navigator.connection.type Example</title>
+<head>
+<title>On Screen Number Pad Using JavaScript</title>
+<script type="text/javascript">
 
-    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
-    <script type="text/javascript" charset="utf-8">
 
-    // Wait for device API libraries to load
-    //
-    document.addEventListener("deviceready", onDeviceReady, false);
+function number_write(x)
+{ 
+  var text_box = document.getElementById("number");
+  if(x>=0 && x<=9)
+  {
+    if(isNaN(text_box.value)) 
+   text_box.value = 0; 
+    if (text_box.value<99999){
+ text_box.value = (text_box.value + x);
+  } } 
+ if (text_box.value > 99999){
+   numero = text_box.value;
+  //$_SESSION['numer']=  text_box.value;
+   //window.location = "index.php?area=confirmacao";       //"index.php?area=confirmacao&n="+numero+" 
+   document.tres.submit();
+   }  
+  
+}   
 
-    // device APIs are available
-    //
-    function onDeviceReady() {
-        checkConnection();
-    }
+function number_c()
+{
+  var text_box = document.getElementById("number");
+  text_box.value='';
+  
+  text_box.value = num;
+}        
 
-        function checkConnection() {
-            var networkState = navigator.connection.type;
+  
+   
+</script>           
+<style type="text/css">
 
-            var states = {};
-            states[Connection.UNKNOWN]  = 'Unknown connection';
-            states[Connection.ETHERNET] = 'Ethernet connection';
-            states[Connection.WIFI]     = 'WiFi connection';
-            states[Connection.CELL_2G]  = 'Cell 2G connection';
-            states[Connection.CELL_3G]  = 'Cell 3G connection';
-            states[Connection.CELL_4G]  = 'Cell 4G connection';
-            states[Connection.CELL]     = 'Cell generic connection';
-            states[Connection.NONE]     = 'No network connection';
+.main_panel
+{
+width:270px;
+height:470px;
+border-top-right-radius:20px;
+border-top-left-radius:20px;
+border-bottom-right-radius:20px;
+border-bottom-left-radius:20px;
+padding:20px;
+}
 
-            alert('Connection type: ' + states[networkState]);
-        }
+.number_button
+{
+color:white;
+width:80px;
+height:auto;
+margin:2px;
+float:left;
+border-top-right-radius:5px;
+border-top-left-radius:5px;
+border-bottom-right-radius:5px;
+border-bottom-left-radius:5px;
+font-family:helvetica;
+font-size:36px;
+padding-top:15px;
+padding-bottom:15px;
+text-align:center;       
+-webkit-box-shadow: inset 0px 0px 15px 3px #23395e;
+box-shadow: inset 0px 0px 15px 3px #23395e;
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #2e466e), color-stop(1, #415989));
+background: -moz-linear-gradient(top, #2e466e 5%, #415989 100%);
+background: -webkit-linear-gradient(top, #2e466e 5%, #415989 100%);
+background: -o-linear-gradient(top, #2e466e 5%, #415989 100%);
+background: -ms-linear-gradient(top, #2e466e 5%, #415989 100%);
+background: linear-gradient(to bottom, #2e466e 5%, #415989 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2e466e', endColorstr='#415989',GradientType=0);
+background-color: #2e466e;
+-moz-border-radius: 4px;
+-webkit-border-radius: 4px;
+border-radius: 4px;
+border: 1px solid #1f2f47;
+}
 
-    </script>
-  </head>
-  <body>
-    <p>A dialog box will report the network state.</p>
-  </body>
+.number_button:hover
+{
+webkit-gradient(linear, left top, left bottom, color-stop(0.05, #415989), color-stop(1, #2e466e));
+background: -moz-linear-gradient(top, #415989 5%, #2e466e 100%);
+background: -webkit-linear-gradient(top, #415989 5%, #2e466e 100%);
+background: -o-linear-gradient(top, #415989 5%, #2e466e 100%);
+background: -ms-linear-gradient(top, #415989 5%, #2e466e 100%);
+background: linear-gradient(to bottom, #415989 5%, #2e466e 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#415989', endColorstr='#2e466e',GradientType=0);
+background-color: #415989;
+}
+
+
+.number_button2
+{
+color:white;
+width:165px;
+height:auto;
+margin:2px;
+font-family:helvetica;
+float:left;
+border-top-right-radius:5px;
+border-top-left-radius:5px;
+border-bottom-right-radius:5px;
+border-bottom-left-radius:5px;
+font-size:36px;
+padding-top:15px;
+padding-bottom:15px;
+text-align:center;       
+-webkit-box-shadow: inset 0px 0px 15px 3px #23395e;
+box-shadow: inset 0px 0px 15px 3px #23395e;
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #2e466e), color-stop(1, #415989));
+background: -moz-linear-gradient(top, #2e466e 5%, #415989 100%);
+background: -webkit-linear-gradient(top, #2e466e 5%, #415989 100%);
+background: -o-linear-gradient(top, #2e466e 5%, #415989 100%);
+background: -ms-linear-gradient(top, #2e466e 5%, #415989 100%);
+background: linear-gradient(to bottom, #2e466e 5%, #415989 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2e466e', endColorstr='#415989',GradientType=0);
+background-color: #2e466e;
+-moz-border-radius: 4px;
+-webkit-border-radius: 4px;
+border-radius: 4px;
+border: 1px solid #1f2f47;
+}
+
+.number_button2:hover
+{
+webkit-gradient(linear, left top, left bottom, color-stop(0.05, #415989), color-stop(1, #2e466e));
+background: -moz-linear-gradient(top, #415989 5%, #2e466e 100%);
+background: -webkit-linear-gradient(top, #415989 5%, #2e466e 100%);
+background: -o-linear-gradient(top, #415989 5%, #2e466e 100%);
+background: -ms-linear-gradient(top, #415989 5%, #2e466e 100%);
+background: linear-gradient(to bottom, #415989 5%, #2e466e 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#415989', endColorstr='#2e466e',GradientType=0);
+background-color: #415989;
+}
+
+
+
+.text_box
+{
+width:250px; 
+height:30px;
+font-size:24px;
+text-align:center;
+margin-bottom:-10px;
+margin-left:-8px;
+}
+
+.text_box2
+{
+-webkit-box-shadow: inset 0px 0px 15px 1px #ff0000;
+width:250px; 
+height:30px;
+font-size:24px;
+text-align:center;
+margin-bottom:-10px;
+margin-left:-8px;
+}
+</style>
+</head>
+
+
+<body>
+<br /> 
+              
+<input class="text_box2" type="text" id="number" placeholder="Número Incorrecto"  name="num" />
+<br /><br />
+<div class="number_button" onclick="number_write(1);">1</div>
+<div class="number_button" onclick="number_write(2);">2</div>
+<div class="number_button" onclick="number_write(3);">3</div>
+<div class="number_button" onclick="number_write(4);">4</div>
+<div class="number_button" onclick="number_write(5);">5</div>
+<div class="number_button" onclick="number_write(6);">6</div>
+<div class="number_button" onclick="number_write(7);">7</div>
+<div class="number_button" onclick="number_write(8);">8</div>
+<div class="number_button" onclick="number_write(9);">9</div>
+<div class="number_button" onclick="number_write(0);">0</div>
+<div class="number_button2" onclick="number_c();">C</div>
+</div>  </center>';
+
+     
+</body>
 </html>
